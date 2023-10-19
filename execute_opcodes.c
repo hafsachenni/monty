@@ -1,5 +1,5 @@
 #include "monty.h"
-
+#include <stdio.h>
 /**
  * execute_opcodes - executes monty opcodes
  * @file: file to be read and interpreted
@@ -24,10 +24,10 @@ void execute_opcodes(FILE *file)
 		}
 
 		get_opcode(&stack, line_number, token);
-		line_num++;
+		line_number++;
 	}
 
-	free_llist(stack);
+	free_list(stack);
 	free(lineptr);
 	fclose(file);
 }
