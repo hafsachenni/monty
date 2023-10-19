@@ -52,5 +52,6 @@ void nop(stack_t **stack, unsigned int line_number);
 void execute_opcodes(FILE *file);
 void get_opcode(stack_t **stack, unsigned int line_number, char *token);
 void free_list(stack_t *stack);
+void getopcode_func(stack_t **stack, unsigned int line_number, char *opcode);
 
 #endif
