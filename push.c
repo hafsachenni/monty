@@ -12,7 +12,7 @@ void push(stack_t **stack, unsigned int line_number)
 	int n;
 	char *arg_token = strtok(NULL, " \n\t");
 
-	if (arg_token == NULL)
+	if (arg_token == NULL || !(is_number(arg_token)))
 	{
 		fprintf(stderr, "L%u: USAGE: push integer\n", line_number);
 		free_list(*stack);
