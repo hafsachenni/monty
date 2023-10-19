@@ -10,6 +10,7 @@
 int main(int argc, char **argv)
 {
 	FILE *file;	/*file to open and read from*/
+	char *ac_file = argv[1];
 
 	if (argc != 2)
 	{
@@ -17,7 +18,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	file = fopen(argv[1], "r");
+	file = fopen(ac_file, "r");
 	if (file == NULL)
 	{
 		fprintf(stderr, "can't open file %s\n", argv[1]);
