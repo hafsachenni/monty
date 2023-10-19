@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 
         if (arg_token == NULL)
         {
-                fprintf(stderr, "l%u: USAGE: push integer\n", line_number);
+                fprintf(stderr, "L%u: USAGE: push integer\n", line_number);
                 free_list(*stack);
                 exit(EXIT_FAILURE);
         }
