@@ -12,6 +12,7 @@ void execute(FILE *file_d)
 	unsigned int line_number = 1;
 	size_t count = 0;
 	ssize_t read;
+
 	stack_t *stack = NULL;
 
 	while ((read = getline(&lineptr, &count, file_d)) != -1)
