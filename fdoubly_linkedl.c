@@ -7,12 +7,8 @@
 
 void free_list(stack_t *stack)
 {
-	stack_t *temp;
-
-	while (stack)
-	{
-		temp = stack->next;
-		free(stack);
-		stack = temp;
-	}
+	if (stack == NULL)
+		return;
+	free_list(stack->next);
+	free(stack);
 }
