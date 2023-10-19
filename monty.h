@@ -50,7 +50,7 @@ void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 
 void execute_opcodes(FILE *file);
-void get_opcode(stack_t **stack, unsigned int line_num, char *token);
+void get_opcode(stack_t **stack, unsigned int line_number, char *token);
 void free_list(stack_t *stack);
 
 #endif

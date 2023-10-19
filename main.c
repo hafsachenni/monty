@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	}
 
 
-	execute (file);
+	execute(file);
 
 	return (0);
 }
