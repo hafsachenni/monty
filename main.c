@@ -1,6 +1,4 @@
 #include "monty.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * main - interpreter for monty files
@@ -11,7 +9,7 @@
 
 int main(int argc, char **argv)
 {
-	FILE *file; /*file to open and read from*/
+	FILE *file;	/*file to open and read from*/
 
 	if (argc != 2)
 	{

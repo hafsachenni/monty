@@ -1,11 +1,11 @@
 #include "monty.h"
 #include <stdio.h>
 /**
- * execute_opcodes - executes monty opcodes
+ * execute - executes monty opcodes
  * @file: file to be read and interpreted
  */
 
-void execute_opcodes(FILE *file)
+void execute(FILE *file)
 {
 	char *lineptr = NULL;
 	char *token;
@@ -23,7 +23,7 @@ void execute_opcodes(FILE *file)
 			continue;
 		}
 
-		get_opcode(&stack, line_number, token);
+		getopcode_func(&stack, line_number, token);
 		line_number++;
 	}
 

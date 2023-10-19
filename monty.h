@@ -1,11 +1,10 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 
 /**
@@ -49,7 +48,7 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 
-void execute_opcodes(FILE *file);
+void execute(FILE *file);
 void get_opcode(stack_t **stack, unsigned int line_number, char *token);
 void free_list(stack_t *stack);
 void getopcode_func(stack_t **stack, unsigned int line_number, char *opcode);
