@@ -2,8 +2,8 @@
 
 /**
  * main - interpreter for monty files
- * @argc: arg count
- * @argv: array of strings
+ * @ac: arg count
+ * @av: array of strings
  * Return: 0
  */
 

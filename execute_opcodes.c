@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * execute - executes monty opcodes
- * @file: file to be read and interpreted
+ * @file_d: file to be read and interpreted
  */
 
 void execute(FILE *file_d)

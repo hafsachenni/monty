@@ -12,11 +12,11 @@ void getopcode_func(stack_t **stack, unsigned int line_number, char *opcode)
 	instruction_t operations[] = {
 		{"push", push},
 		{"pall", pall},
-		/*{"pint", pint},
+		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", nop},*/
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
