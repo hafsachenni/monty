@@ -5,16 +5,16 @@
  * @file: file to be read and interpreted
  */
 
-void execute(FILE *file)
+void execute(FILE *file_d)
 {
 	char *lineptr = NULL;
 	char *token;
 	unsigned int line_number = 1;
-	size_t char_count = 0;
+	size_t count = 0;
 	ssize_t read;
 	stack_t *stack = NULL;
 
-	while ((read = getline(&lineptr, &char_count, file)) != -1)
+	while ((read = getline(&lineptr, &count, file_d)) != -1)
 	{
 		token = strtok(lineptr, " \n\t");
 		if (token == NULL || token[0] == '#')
@@ -29,5 +29,5 @@ void execute(FILE *file)
 
 	free_list(stack);
 	free(lineptr);
-	fclose(file);
+	fclose(file_d);
 }

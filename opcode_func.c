@@ -12,11 +12,12 @@ void getopcode_func(stack_t **stack, unsigned int line_number, char *opcode)
 	instruction_t operations[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", pint},
+		/*{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", nop},
+		{"nop", nop},*/
+		{NULL, NULL}
 	};
 
 	int i = 0;
@@ -31,7 +32,7 @@ void getopcode_func(stack_t **stack, unsigned int line_number, char *opcode)
 		i++;
 	}
 
-	fprintf(stderr, "l%u: unknown instruction %s\n", line_number, opcode);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	free_list(*stack);
 	exit(EXIT_FAILURE);
 }

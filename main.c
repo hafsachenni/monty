@@ -7,21 +7,21 @@
  * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int ac, char *av[])
 {
 	FILE *file;	/*file to open and read from*/
-	char *ac_file = argv[1];
+	char *m_file = av[1];
 
-	if (argc != 2)
+	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	file = fopen(ac_file, "r");
+	file = fopen(m_file, "r");
 	if (file == NULL)
 	{
-		fprintf(stderr, "can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: can't open file %s\n", av[1]);
 		return (EXIT_FAILURE);
 	}
 

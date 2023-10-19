@@ -12,12 +12,12 @@ void push(stack_t **stack, unsigned int line_number)
 	int n;
 	char *arg_token = strtok(NULL, " \n\t");
 
-	if (arg_token == NULL)
-	{
-	fprintf(stderr, "l%u: USAGE: push integer\n", line_number);
-	free_list(*stack);
-	exit(EXIT_FAILURE);
-	}
+        if (arg_token == NULL)
+        {
+                fprintf(stderr, "L%u: USAGE: push integer\n", line_number);
+                free_list(*stack);
+                exit(EXIT_FAILURE);
+        }
 
 	n = atoi(arg_token);
 	newnode = malloc(sizeof(stack_t));
