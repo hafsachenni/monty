@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * is_number - checks if second index is number in the string
+ * @str: the string
+ * Return: 1 if succeed
+ */
 int is_number(char *str)
 {
 	int i = 0;
